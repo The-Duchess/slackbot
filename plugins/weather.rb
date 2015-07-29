@@ -13,7 +13,6 @@ require 'date'
 
 class Weather < Pluginf
 
-reg, pluginname, filename, description
 	def initialize(regex, name, filename, help)
 			@regexp = regex
 			@name = name.to_s
