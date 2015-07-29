@@ -10,4 +10,4 @@
 
 > [slack-ruby-client](https://github.com/dblock/slack-ruby-client) is licensed under the [MIT License](https://github.com/dblock/slack-ruby-client/blob/master/LICENSE.md)
 
-> [slackbot](https://github.com/The-Duchess/slackbot) is licensed under the [MIT License]()
+> [slackbot](https://github.com/The-Duchess/slackbot) is licensed under the [MIT License](https://github.com/The-Duchess/slackbot/blob/master/COPYING.md)
