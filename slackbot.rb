@@ -1,4 +1,5 @@
 #! /bin/env ruby
+# usage: ruby slackbot.rb <API_KEY>
 
 require "slack-ruby-client"
 
