@@ -6,7 +6,7 @@ Slack.configure do |config|
   config.token = ARGV[0].to_s
 end
 
-client = Slack::Web::Client.new
+client = Slack::RealTime::Client.new
 
 puts client.auth_test
 
