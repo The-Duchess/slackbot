@@ -24,8 +24,8 @@ class Weather < Pluginf
 			@users = Hash.new
 			@users_s = Array.new
 
-			if not File.exist?("./res/.weather") then
-				`touch ./res/.weather` #if the user list file does not exist then create it
+			if not File.exist?("./.weather") then
+				`touch ./.weather` #if the user list file does not exist then create it
 			end
 
 			p load_users
@@ -57,7 +57,7 @@ class Weather < Pluginf
 
 		def save_users
 			# Write out users to file
-			File.open("./res/.weather", 'w') do |fw|
+			File.open("./.weather", 'w') do |fw|
 				@users_s.each do |a|
 					fw.puts("#{a}:#{@users.fetch(a)}\n")
 				end
@@ -68,7 +68,7 @@ class Weather < Pluginf
 
 		def load_users
 			# Read users from file
-			File.open("./res/.weather", 'r') do |fr|
+			File.open("./.weather", 'r') do |fr|
 				while line = fr.gets
 					line.chomp!
 					# file format
