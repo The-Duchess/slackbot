@@ -14,9 +14,9 @@ end
 
 client.on :message do |data|
       case data['text']
-      when 'bot hi' then
+      when 'husk hi' then
             client.message channel: data['channel'], text: "Hi <@#{data['user']}>!"
-      when /^bot/ then
+      when /^husk/ then
             client.message channel: data['channel'], text: "Sorry <@#{data['user']}>, what?"
       end
 end
