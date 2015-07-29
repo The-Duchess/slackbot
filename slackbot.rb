@@ -4,7 +4,7 @@
 require "slack-ruby-client"
 require_relative "plugin_manager.rb"
 
-plugin_s = ["cat.rb"]
+plugin_s = ["cat.rb", "weather.rb"]
 plugins = Plugin_manager.new("./plugins")
 plugin_s.each { |a| plugins.plugin_load(a) }
 backlog = []
