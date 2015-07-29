@@ -424,7 +424,8 @@ class Weather < Pluginf
 
 		#your definition for script
 		def script(data, admins, backlog)
-			return "<@#{data['user']}> #{parse(data['text'], data['user'], data['channel'])}"
+			res_p = parse(data['text'], data['user'], data['channel'])
+			return "<@#{data['user']}> #{res_p}"
 		end
 
 end
