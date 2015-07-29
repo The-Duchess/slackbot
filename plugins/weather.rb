@@ -429,7 +429,7 @@ prefix_s = [
 		/^`w/,
 		/^`fc/
 	     ]
-reg = Regexp.union(prefix)
+reg = Regexp.union(prefix_s)
 
 filename = "weather.rb" # file name
 pluginname = "weather" # name for plugin
