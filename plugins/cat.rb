@@ -11,10 +11,10 @@ class Cat_print < Pluginf
 
 	# your definition for function called if the regex for the plugin matches the message.message
 	# inputs:
-	# 	- IRC_message object
+	# 	- data hash
 	# 	- admins array
-	# 	- backlog array of IRC_message objects
-	# output: string to send to the socket
+	# 	- backlog array of data hashes
+	# output: string to send to data['channel']
 	def script(data, admins, backlog)
 
 		# plugins must return the raw mesaage they wish to have sent to the socket
