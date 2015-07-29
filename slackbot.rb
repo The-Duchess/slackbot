@@ -36,6 +36,7 @@ client.on :message do |data|
       plugins.plugins.each do |plugin|
             if data.class == nil then next end
             if data['text'].class == nil then next end
+            puts data['text']
             if data['text'].to_s.match(plugin.regex)
                   puts data['text']
                   client.message channel: data['channel'], text: plugin.script(data, backlog, admins).to_s
