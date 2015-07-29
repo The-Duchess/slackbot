@@ -1,10 +1,9 @@
 #! /bin/env ruby
 
-require "slack"
 require "slack-ruby-client"
 
 Slack.configure do |config|
-  config.token = ENV[ARGV[0].to_s]
+  config.token = ARGV[0].to_s
 end
 
 client = Slack::Web::Client.new
