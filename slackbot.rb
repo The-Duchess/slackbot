@@ -37,12 +37,6 @@ client.on :message do |data|
             end
       end
 
-      responses = plugins.check_all(data, admins, backlog)
-
-      responses.each do |a|
-            client.message channel: data['channel'], text: a.to_s
-      end
-
 end
 
 client.start!
