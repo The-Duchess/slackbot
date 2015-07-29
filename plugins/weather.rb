@@ -219,7 +219,7 @@ class Weather < Pluginf
 
 						humidity = days_fc[i]['humidity'].to_s
 
-						days.push("#{days_names[i]}: Weather for #{@ac} is #{weather_condition}, Temperature: min #{temper_f_min}°F or 08#{temper_c_min}°C, max 04#{temper_f_max}°F or 04#{temper_c_max}°C, Humidity of #{humidity} percent, Wind speeds at #{wind_speed} mph")
+						days.push("#{days_names[i]}: Weather for #{@ac} is #{weather_condition}, Temperature: min #{temper_f_min}°F or #{temper_c_min}°C, max #{temper_f_max}°F or #{temper_c_max}°C, Humidity of #{humidity} percent, Wind speeds at #{wind_speed} mph")
 
 					rescue => e
 						return "#{@ac} is this place actually real?"
