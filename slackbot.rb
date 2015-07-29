@@ -30,6 +30,9 @@ client.on :message do |data|
       when /^`src$/ then
             client.message channel: data['channel'], text: "<@#{data['user']}>, https://github.com/The-Duchess/slackbot"
       when /^`plsgo$/ then
+            plugins.plugins.each do |plugin|
+                  plugin.cleanup
+            end
             abort
       end
 
