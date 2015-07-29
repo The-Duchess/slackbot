@@ -13,12 +13,14 @@ require 'date'
 
 class Weather < Pluginf
 
-	def initialize(regex, name, help)
-			@regexp = Regexp.new(regex.to_s)
+reg, pluginname, filename, description
+	def initialize(regex, name, filename, help)
+			@regexp = regex
 			@name = name.to_s
 			@help = help
 			@chan_list = []
 			@chan_list.push("any")
+			@file_name = filename
 
 			# Weather user hash and array
 			@users = Hash.new
