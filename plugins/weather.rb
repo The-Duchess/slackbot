@@ -279,12 +279,6 @@ class Weather < Pluginf
 			return @r_w
 		end
 
-		def get_forecast_yahoo(area_code)
-		end
-
-		def get_weather_yahoo(area_code)
-		end
-
 		def get_ac(nick)
 			begin
 				return @users.fetch(nick)
