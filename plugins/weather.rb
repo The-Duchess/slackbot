@@ -219,7 +219,7 @@ class Weather < Pluginf
 
 						humidity = days_fc[i]['humidity'].to_s
 
-						days.push("\x0314#{days_names[i]}\x03: Weather for \x0314#{@ac}\x03 is #{weather_condition}, Temperature: min \x0308#{temper_f_min}\x03°F or \x0308#{temper_c_min}\x03°C, max \x0304#{temper_f_max}\x03°F or \x0304#{temper_c_max}\x03°C, Humidity of \x0302#{humidity}\x03 percent, Wind speeds at \x0303#{wind_speed}\x03 mph")
+						days.push("#{days_names[i]}: Weather for #{@ac} is #{weather_condition}, Temperature: min #{temper_f_min}°F or 08#{temper_c_min}°C, max 04#{temper_f_max}°F or 04#{temper_c_max}°C, Humidity of #{humidity} percent, Wind speeds at #{wind_speed} mph")
 
 					rescue => e
 						return "#{@ac} is this place actually real?"
@@ -265,15 +265,15 @@ class Weather < Pluginf
 			parsed_json_m = JSON.parse(contents_m)
 			if parsed_json['main'].nil?
 				@r_w = "#{@ac} is this place actually real?"
-			elsif weather_in_f = (parsed_json['main']['temp']).to_i
+			elsif weather_in_f = (parsed_json['main']['temp'])
 				begin
-					weather_in_c = (parsed_json_m['main']['temp']).to_i
+					weather_in_c = (parsed_json_m['main']['temp'])
 				rescue NoMethodError => e
 					return "#{@ac} is this place actually real?"
 				end
 				humidity = parsed_json['main']['humidity']
 				weathercode = weatherc("#{parsed_json['weather'][0]['id']}")
-				@r_w.concat("Weather of \x0304#{@ac.to_s}:\x03 #{weathercode} at \x0302#{weather_in_f}°F\x03 or \x0302#{weather_in_c}°C\x03 and winds at \x0311#{parsed_json['wind']['speed']} mph\x03")
+				@r_w.concat("Weather of #{@ac.to_s}: #{weathercode} at #{weather_in_f}°F or #{weather_in_c}°C and winds at #{parsed_json['wind']['speed']} mph")
 			end
 
 			return @r_w
