@@ -27,8 +27,8 @@ client.on :message do |data|
       case data['text']
       when 'husk hi' then
             client.message channel: data['channel'], text: "Hi <@#{data['user']}>!"
-      #when /^husk/ then
-      #      client.message channel: data['channel'], text: "Sorry <@#{data['user']}>, what?"
+      when /^`src$/ then
+            client.message channel: data['channel'], text: "<@#{data['user']}>, https://github.com/The-Duchess/slackbot"
       end
 
       plugins.plugins.each do |plugin|
