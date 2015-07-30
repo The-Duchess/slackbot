@@ -4,6 +4,11 @@
 
 > Author: Alice "Duchess" Archer
 
+usage:
+
+    gem install slack-ruby-client
+    ruby slackbot.rb <API_KEY>
+
 **Copyright and License**
 
 > Copyright (c) 2015, Daniel Doubrovkine, Artsy [Contributors](https://raw.githubusercontent.com/dblock/slack-ruby-client/master/CHANGELOG.md) for [slack-ruby-client](https://github.com/dblock/slack-ruby-client)
