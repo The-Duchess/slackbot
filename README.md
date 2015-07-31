@@ -10,7 +10,7 @@ setup:
 
 usage:
 
-    ruby slackbot.rb <API_KEY>
+    ruby slackbot.rb <BOT_USER_NAME> <API_KEY>
 
 **Copyright and License**
 
