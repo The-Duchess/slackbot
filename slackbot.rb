@@ -25,7 +25,7 @@ client.on :message do |data|
       backlog.push(data)
 
       case data['text']
-      when 'husk hi' then
+      when /^hi/ then
             client.message channel: data['channel'], text: "Hi <@#{data['user']}>!"
       when /^`src$/ then
             client.message channel: data['channel'], text: "<@#{data['user']}>, https://github.com/The-Duchess/slackbot"
