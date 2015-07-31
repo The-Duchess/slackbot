@@ -4,9 +4,12 @@
 
 > Author: Alice "Duchess" Archer
 
-usage:
+setup:
 
     gem install slack-ruby-client
+
+usage:
+
     ruby slackbot.rb <API_KEY>
 
 **Copyright and License**
