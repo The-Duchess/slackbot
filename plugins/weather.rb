@@ -376,11 +376,11 @@ class Weather < Pluginf
 					return "invalid arguments"
 				end
 
-				if not check_user(tokens[1])
+				if not check_user(nick)
 					ac_t = ""
 					if tokens.length > 2
 						1.upto(tokens.length - 1) do |i|
-							ac_t.concat("#{i}")
+							ac_t.concat("#{tokens[i]}")
 						end
 					else
 						ac_t = tokens[1]
@@ -391,7 +391,7 @@ class Weather < Pluginf
 					ac_t = ""
 					if tokens.length > 2
 						1.upto(tokens.length - 1) do |i|
-							ac_t.concat("#{i}")
+							ac_t.concat("#{tokens[i]}")
 						end
 					else
 						ac_t = tokens[1]
